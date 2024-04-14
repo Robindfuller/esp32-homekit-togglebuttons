@@ -109,7 +109,8 @@ setup() {
 
   const int numberOfAccessories = 20;
   for (int i = 1; i <= numberOfAccessories; i++) {
-    new ToggleButtonAccessory("Toggle Button 1");
+    String accessoryName = "Toggle Button " + String(i);  // Create the name
+    new ToggleButtonAccessory(accessoryName.c_str());  
   }
 
   new Service::HAPProtocolInformation();
