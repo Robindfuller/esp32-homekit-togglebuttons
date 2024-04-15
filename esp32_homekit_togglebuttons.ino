@@ -33,7 +33,6 @@ public:
     : Service::Switch(), name(name) {  // Use the Switch service
     new Characteristic::Name(name);
     power = new Characteristic::On();
-    pinMode(2, OUTPUT);  // Ensure the pin is set to output mode
   }
 
   boolean update() override {
