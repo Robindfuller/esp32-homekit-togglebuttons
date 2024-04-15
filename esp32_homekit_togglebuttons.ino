@@ -89,8 +89,7 @@ public:
 void
 setup() {
   Serial.begin(115200);
-  pinMode(2, OUTPUT);
-
+  
   homeSpan.setWifiCallback([]() {
     homeSpan.setPairingCode("11122333");
     Serial.println("WiFi Connected. Pairing Code Set.");
